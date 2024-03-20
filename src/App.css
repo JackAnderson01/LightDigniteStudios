@@ -3,4 +3,39 @@
     background-size: cover;
     background-position: center;
   }
+
+  .bg-image{
+    background: url("./assets/discuss_bg.png");
+    background-size: cover;
+    background-position: center;
+  }
   
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 4px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #dd1b38;
+      border-radius: 100px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #dd1b38d4;
+      cursor: pointer;
+    } 
+
+
+
+    .swiper-button-next, .swiper-button-prev{
+      color: #000 !important;
+    }

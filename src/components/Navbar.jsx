@@ -56,9 +56,9 @@ const Navbar = () => {
         </span>
         <Link
           to="/contact-us"
-          className="cursor-pointer w-32 lg:w-40 h-8 lg:h-10 rounded-full flex justify-center items-center bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] transition-all duration-200 hover:opacity-90 uppercase outline-none border-none text-white text-[12px] lg:text-[13px] font-semibold"
+          className="cursor-pointer w-32 lg:w-40 h-8 lg:h-10 rounded-full flex justify-center items-center bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] transition-all duration-200 hover:opacity-90  outline-none border-none text-white text-[12px] lg:text-[13px] font-semibold"
         >
-          Get a Quote
+          Schedule A Call
         </Link>
         <button
           onClick={() => setIsOpen((prev) => !prev)}

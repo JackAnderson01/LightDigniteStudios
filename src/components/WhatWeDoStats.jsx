@@ -4,7 +4,7 @@ import StatsCard from "./StatsCard";
 const WhatWeDoStats = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-start items-start gap-4">
-      <h1 className="text-[46px] md:text-[56px] md:text-center lg:text-left font-bold text-black leading-tight">
+      <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
         Dedicated <span className="text-[#dd1b38]">Custom Mobile App </span>{" "}
         Developers.
       </h1>

@@ -64,7 +64,7 @@ const HeroContent = () => {
             placeholder="Message"
             className="w-full h-36 resize-none rounded-2xl bg-transparent outline-none p-2 border border-white text-white placeholder:text-white"
           ></textarea>
-          <button className="w-[30%] h-10 rounded-full  outline-none px-4 bg-[#dd1b36] font-medium text-white placeholder:text-white">
+          <button className="w-[30%] h-10 rounded-full  outline-none px-4 bg-[#fff] font-medium text-[#dd1b36] placeholder:text-white">
             Send
           </button>
         </div>

@@ -27,6 +27,8 @@ import Awards from "./awards.png"
 import Ratings from "./ratings.png"
 import Journey from "./journey.png"
 import Visions from "./visions.png"
+import HowDevelop from "./develop.png"
+import Ios from "./ios.png"
 
 
 
@@ -62,5 +64,7 @@ export {
     Awards,
     Journey,
     Ratings,
-    Visions
+    Visions,
+    HowDevelop,
+    Ios
 }

@@ -7,7 +7,7 @@ const WhatWeDoServices = () => {
       <span className="text-3xl text-[#dd1b38] font-medium">
         App Development Services
       </span>
-      <h1 className="text-[46px] md:text-[53px] md:text-center lg:text-left font-bold text-black leading-tight">
+      <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
         We Build Apps That{" "}
         <span className="text-[#dd1b38]">Exceeds Expectations.</span>{" "}
       </h1>
