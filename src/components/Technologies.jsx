@@ -137,7 +137,10 @@ const Technologies = () => {
   };
 
   return (
-    <div className="w-full h-auto flex flex-col gap-10   justify-start items-center py-4 lg:py-10 px-4 lg:px-8 xl:px-48 ">
+    <div
+      id="tech"
+      className="w-full h-auto flex flex-col gap-10   justify-start items-center py-4 lg:py-10 px-4 lg:px-8 xl:px-48 "
+    >
       <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
         Technologies We <span className="text-[#dd1b38]">Work</span> With
       </h1>

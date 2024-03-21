@@ -5,7 +5,7 @@ import TechServiceCard from "./TechServiceCard";
 const ServicesWeProvide = () => {
   return (
     <div
-      id="hero"
+      id="services"
       className="w-full h-auto  flex flex-col justify-start items-start  py-2 lg:py-4 px-6 lg:px-8 xl:px-48 "
     >
       <div className="w-full h-auto  py-14 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">

@@ -4,7 +4,10 @@ import { HowDevelop } from "../assets/export";
 
 const HowWeDevelop = () => {
   return (
-    <div className="w-full h-auto  flex flex-col justify-start items-start  py-2 lg:py-4 px-6 lg:px-8 xl:px-48">
+    <div
+      id="about"
+      className="w-full h-auto   flex flex-col justify-start items-start  py-2 lg:py-4 px-6 lg:px-8 xl:px-48"
+    >
       <div className="w-full h-auto  py-14 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">
         <div className="w-full lg:w-1/2 h-auto flex justify-end items-center relative">
           <img src={HowDevelop} className="drop-shadow-xl" />

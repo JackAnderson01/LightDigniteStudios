@@ -26,10 +26,10 @@ const NavbarModal = ({ isOpen, setIsOpen }) => {
         Services
       </button>
       <button
-        onClick={() => navigateTo("work")}
+        onClick={() => navigateTo("tech")}
         className=" font-semibold w-full h-8 rounded-sm hover:bg-[#fdfdfd]/[0.9] flex items-center justify-start px-4  text-black text-sm border-none outline-none"
       >
-        Work
+        Technologies
       </button>
       <button
         onClick={() => navigateTo("faq")}
@@ -38,10 +38,10 @@ const NavbarModal = ({ isOpen, setIsOpen }) => {
         Faq
       </button>
       <button
-        onClick={() => navigateTo("testimonial")}
+        onClick={() => navigateTo("about")}
         className=" font-semibold w-full h-8 rounded-sm hover:bg-[#fdfdfd]/[0.9] flex items-center justify-start px-4  text-black text-sm border-none outline-none"
       >
-        Testimonials
+        About
       </button>
       <Link
         to="/contact-us"

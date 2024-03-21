@@ -4,7 +4,7 @@ import { IoIosCheckmark } from "react-icons/io";
 const TechStack = () => {
   return (
     <div
-      id="hero"
+      id="stack"
       className="w-full mt-6 h-auto flex flex-col justify-start items-start py-2 lg:py-6 px-6 lg:px-8 xl:px-48 "
     >
       <div className="w-full h-auto min-h-[calc(100vh-20vh)] py-14 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">

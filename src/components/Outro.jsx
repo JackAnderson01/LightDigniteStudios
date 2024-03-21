@@ -3,7 +3,7 @@ import React from "react";
 const Outro = () => {
   return (
     <div
-      id="hero"
+      id="outro"
       className="w-full h-auto bg-image flex flex-col justify-start items-start  py-8 lg:py-12 px-6 lg:px-8 xl:px-48 "
     >
       <div className="w-full  h-[22rem] flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
