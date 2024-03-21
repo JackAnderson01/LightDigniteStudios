@@ -6,19 +6,18 @@ const Outro = () => {
       id="outro"
       className="w-full h-auto bg-image flex flex-col justify-start items-start  py-8 lg:py-12 px-6 lg:px-8 xl:px-48 "
     >
-      <div className="w-full  h-[22rem] flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
+      <div className="w-full  h-auto flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
         <div className="flex flex-col gap-2 justify-start md:items-center lg:items-start items-start">
-          <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight"></h1>
-          <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
+          <h1 className="text-[42px] md:text-[50px] md:text-center lg:text-left font-extrabold text-white leading-tight">
             Join The
-            <span className="text-[#dd1b38]">
+            <span className="text-[#fac036]">
               {" "}
               Mobile Revolution
               <br />{" "}
             </span>{" "}
             With Our Expert Team <br /> Discuss
           </h1>
-          <span className="text-gray-800 text-[12px] md:text-lg md:text-center lg:text-left font-normal">
+          <span className="text-gray-100 text-[13px] md:text-lg md:text-center lg:text-left font-normal">
             Our expert team can help you navigate the complex mobile landscape,
             from <br /> developing a mobile strategy to designing and building a
             mobile app.

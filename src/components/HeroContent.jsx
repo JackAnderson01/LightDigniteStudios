@@ -3,7 +3,7 @@ import { IoIosCheckmark } from "react-icons/io";
 
 const HeroContent = () => {
   return (
-    <div className="w-full h-auto min-h-[calc(100vh)] py-14 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">
+    <div className="w-full h-auto min-h-[calc(100vh)] py-20 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">
       <div className="w-full lg:w-1/2 h-auto flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
         <div className="flex flex-col gap-2 justify-start md:items-center lg:items-start items-start">
           <h1 className="text-[46px] md:text-[56px] md:text-center lg:text-left font-bold text-black leading-tight">

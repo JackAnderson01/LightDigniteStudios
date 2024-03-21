@@ -4,10 +4,10 @@ const Faq = () => {
   return (
     <div
       id="faq"
-      className="relative w-full h-auto  py-6  md:py-14 px-6 lg:px-8 xl:px-48 lg:py-8 flex flex-col justify-center items-start gap-12 "
+      className="relative w-full h-auto  py-6  md:py-14 px-6 lg:px-8 xl:px-48 lg:py-8 flex flex-col justify-center items-start md:items-center lg:items-start gap-12 "
     >
-      <div>
-        <span className="text-3xl text-[#dd1b38] font-medium">
+      <div className="w-auto flex flex-col gap-1 justify-start items-start md:items-center lg:items-start">
+        <span className="text-3xl text-left md:text-center lg:text-left text-[#dd1b38] font-medium">
           Frequently Asked Questions
         </span>
         <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
