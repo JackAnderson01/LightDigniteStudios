@@ -33,7 +33,7 @@ const Home = () => {
       <WhatWeDo />
       <HowWeDevelop />
       <ServicesWeProvide />
-      <TechStack />
+      {/* <TechStack /> */}
       <Outro />
       <Faq />
       <Technologies />

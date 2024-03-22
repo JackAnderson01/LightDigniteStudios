@@ -6,7 +6,7 @@ const ServicesWeProvide = () => {
   return (
     <div
       id="services"
-      className="w-full h-auto  flex flex-col justify-start items-start  py-2 lg:py-4 px-6 lg:px-8 xl:px-48 "
+      className="w-full h-auto  flex flex-col justify-start items-start  py-6 lg:py-10 px-6 lg:px-8 xl:px-48 "
     >
       <div className="w-full h-auto  py-14 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">
         <div className="w-full lg:w-2/3 h-auto flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
