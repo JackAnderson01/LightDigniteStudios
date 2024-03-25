@@ -3,6 +3,38 @@ import { IoIosCheckbox } from "react-icons/io";
 import TechServiceCard from "./TechServiceCard";
 
 const ServicesWeProvide = () => {
+  const arr = [
+    {
+      title: "Mobile app consulting",
+      description:
+        "We help finalize app concepts, offer guidance on platform and device compatibility, strategize project activities, and streamline development expenses.",
+    },
+    {
+      title: "Mobile app design",
+      description:
+        "Our designers craft smooth and user-friendly UX and visually captivating UI to guarantee conversion, engagement, and effortless adoption.",
+    },
+    {
+      title: "Mobile app development",
+      description:
+        "Our developers specialize in creating and deploying fast, stable, and high-performing mobile apps.successfully implemented projects, our track record speaks for itself.",
+    },
+    {
+      title: "Web development",
+      description:
+        "Dignite Studios is prepared to complement your mobile app with a web app, web portal, or online store.",
+    },
+    {
+      title: "Mobile app integration",
+      description:
+        "Proficient in a diverse array of APIs, we ensure seamless integration with backends and any third-party software.",
+    },
+    {
+      title: "Maintenance and support",
+      description:
+        "Dignite Studios provides post-launch support, compliance, security, performance management, and app evolution services.",
+    },
+  ];
   return (
     <div
       id="services"
@@ -23,12 +55,9 @@ const ServicesWeProvide = () => {
         </div>
       </div>
       <div className="w-full mt-6 grid gap-6 lg:gap-12 grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2">
-        <TechServiceCard />
-        <TechServiceCard />
-        <TechServiceCard />
-        <TechServiceCard />
-        <TechServiceCard />
-        <TechServiceCard />
+        {arr?.map((service, key) => {
+          return <TechServiceCard service={service} key={key} />;
+        })}
       </div>
     </div>
   );

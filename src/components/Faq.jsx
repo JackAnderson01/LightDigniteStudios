@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoCaretDownCircleOutline } from "react-icons/io5";
 
 const Faq = () => {
+  const [openAccordion, setOpenAccordion] = useState(null);
+
+  const handleAccordionClick = (accordionId) => {
+    setOpenAccordion((prev) => (prev === accordionId ? null : accordionId));
+  };
   return (
     <div
       id="faq"
@@ -23,47 +29,34 @@ const Faq = () => {
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-1")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100   outline-none rounded-md   hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(1)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 1 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 1 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>
                 First and foremost, who will be working on my project?
               </span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
             id="accordion-1"
-            className="hidden transition-all duration-200  "
+            className={`transition-all duration-200 ${
+              openAccordion === 1 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5    rounded-md mt-1 ">
-              <p className="mb-2 text-gray-700 ">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 The key asset of digital agencies is their staff of digital
                 professionals. You want to evaluate their competence as well as
                 their work culture to see whether you can form a meaningful
@@ -74,51 +67,37 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-2")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(2)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 1 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 2 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>Will you provide consultation and ideas?</span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-2"
-            className="hidden transition-all duration-200 "
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 2 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 You be astonished at how many agencies provide passive
                 assistance, waiting for your requests and directions. You want
                 your digital agency to take the lead on your project by working
@@ -131,54 +110,40 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-3")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(3)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 3 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 3 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>
                 Who owns the legal rights to the technology developed by a
                 Dignite Studios developer?
               </span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-3"
-            className="hidden transition-all duration-200 "
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 3 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 The legal rights to the technology produced by Dignite Studios
                 developers are owned by the client. All development done by our
                 firm is the clients sole property.
@@ -186,53 +151,39 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-4")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(4)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 1 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 4 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>
                 Does Dignite Studios build apps for both iOS and Android?
               </span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-4"
-            className="hidden transition-all duration-200 "
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 4 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 Yes, the majority of the apps we create are compatible with both
                 iOS and Android. People frequently prefer their applications to
                 function on both mobile and online platforms, therefore we
@@ -244,53 +195,39 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-5")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(5)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 5 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 5 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>
                 I already have an existing website, how easy is it to alter it?
               </span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-5"
-            className="hidden"
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 5 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 Depending on the adjustments that must be made, upgrading an old
                 one might be challenging. If the need is complicated, it could
                 take some time to fulfil; however, if only minor adjustments
@@ -302,51 +239,37 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-6")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(6)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 6 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 6 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
               <span>How much does hosting my app or webite cost?</span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-6"
-            className="hidden"
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 6 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 The price varies depending on the type of hosting you select and
                 the hosting service provider. Choose the most appropriate
                 hosting type and provider from the range of choices on the
@@ -355,53 +278,39 @@ const Faq = () => {
             </div>
           </div>
         </div>
-
         <div
           id="accordion-collapse"
           data-accordion="collapse"
           className="w-full"
         >
-          <h2 id="accordion-collapse-heading-1">
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("accordion-7")
-                  .classList.toggle("hidden");
-              }}
-              className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-700 bg-gray-100  rounded-md  outline-none    hover:opacity-95 gap-3"
-              data-accordion-target="#accordion-collapse-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-collapse-body-1"
+          <button
+            type="button"
+            onClick={() => handleAccordionClick(7)}
+            className="flex items-center justify-between w-full py-4 font-medium rtl:text-right text-[#7D7D7D] outline-none hover:opacity-95 border-b border-[#7D7D7D] gap-3"
+            data-accordion-target="#accordion-collapse-body-1"
+            aria-expanded={openAccordion === 7 ? "true" : "false"}
+            aria-controls="accordion-collapse-body-1"
+          >
+            <div
+              className={`w-full flex justify-start items-center text-lg lg:text-2xl text-left gap-2 ${
+                openAccordion === 7 ? "text-[#dd1b36]" : "text-inherit"
+              }`}
             >
-              <span>
+              <span className="w-[80%]">
                 How do you ensure data security of mobile apps and websites?
               </span>
-              <svg
-                data-accordion-icon
-                className="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </svg>
-            </button>
-          </h2>
+            </div>
+            <IoCaretDownCircleOutline className="text-lg" />
+          </button>
           <div
-            id="accordion-7"
-            className="hidden"
+            id="accordion-1"
+            className={`transition-all duration-200 ${
+              openAccordion === 7 ? "" : "hidden"
+            }`}
             aria-labelledby="accordion-collapse-heading-1"
           >
-            <div className="p-5   rounded-md mt-1  ">
-              <p className="mb-2 text-gray-700">
+            <div className="py-1 rounded-md mt-1 ">
+              <p className="mb-2 text-gray-800 ">
                 For the purpose of creating highly secure mobile apps and
                 websites, we adhere to suitable encryption and the most recent
                 data security protocols.

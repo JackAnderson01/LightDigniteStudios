@@ -1,26 +1,32 @@
 import React from "react";
 import { IoIosCheckmark } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const HeroContent = () => {
   return (
     <div className="w-full h-auto min-h-[calc(100vh)] py-20 lg:py-4 flex lg:flex-row flex-col  gap-10 justify-start lg:justify-between items-center ">
       <div className="w-full lg:w-1/2 h-auto flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
         <div className="flex flex-col gap-2 justify-start md:items-center lg:items-start items-start">
-          <h1 className="text-[46px] md:text-[56px] md:text-center lg:text-left font-bold text-black leading-tight">
-            Modernizing Mobile <br />{" "}
-            <span className="text-[#dd1b38]">Platforms</span>
+          <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-bold text-black leading-tight">
+            Mobile App <br />{" "}
+            <span className="text-[#dd1b38]">Development Solutions</span>
           </h1>
           <span className="text-gray-600 text-[16px] md:text-lg md:text-center lg:text-left font-medium">
-            As a prominent application development company, <br /> we deliver
-            exquisite custom mobile app development services.
-            <br /> Our focus is on delivering state-of-the-art <br /> solutions
-            with the collaboration of our experienced <br /> and talented team
-            to fit your requirements.
+            Established in the realm of mobile development in 2020, <br />{" "}
+            Dignite Studios specializes in crafting native, cross-platform, and
+            progressive web applications.
+            <br /> Our focus lies in delivering stable performance, user-centric
+            design,
+            <br /> and a distinctive value proposition to help your app shine in
+            a competitive market.
           </span>
         </div>
-        <button className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] capitalize text-[14px] hover:opacity-85 text-white font-semibold ">
+        <Link
+          to="/contact-us"
+          className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] capitalize text-[14px] hover:opacity-85 text-white font-semibold "
+        >
           Get your design ready
-        </button>
+        </Link>
         <div className="flex flex-col gap-2 justify-start items-start">
           <div className="w-auto flex gap-2 justify-start items-center">
             <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#f15c20]">

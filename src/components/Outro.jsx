@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Outro = () => {
   return (
@@ -9,24 +10,27 @@ const Outro = () => {
       <div className="w-full  h-auto flex flex-col justify-start md:items-center lg:items-start items-start gap-6">
         <div className="flex flex-col gap-2 justify-start md:items-center lg:items-start items-start">
           <h1 className="text-[42px] md:text-[50px] md:text-center lg:text-left font-extrabold text-white leading-tight">
-            Join The
+            Embark on the
             <span className="text-[#fac036]">
               {" "}
               Mobile Revolution
               <br />{" "}
             </span>{" "}
-            With Our Expert Team <br /> Discuss
+            with Our Team of Experts
           </h1>
           <span className="text-gray-100 text-[13px] md:text-lg md:text-center lg:text-left font-normal">
-            Our expert team can help you navigate the complex mobile landscape,
-            from <br /> developing a mobile strategy to designing and building a
-            mobile app.
+            Navigate the Mobile Landscape with Our Expertise.
+            <br /> From formulating a mobile strategy to crafting and developing
+            your app, our team is here to guide you every step of the way.
           </span>
         </div>
         <div className="w-auto flex gap-2 justify-start items-center">
-          <button className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-gradient-to-r from-[#f15c20] to-[#dd1b36] hover:bg-black capitalize text-[14px]  text-white font-semibold ">
+          <Link
+            to="/contact-us"
+            className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-black hover:bg-gradient-to-r from-[#f15c20] to-[#dd1b36] hover:bg-black capitalize text-[14px]  text-white font-semibold "
+          >
             Hire Our Expert
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosCheckmark } from "react-icons/io";
 import { HowDevelop } from "../assets/export";
+import { Link } from "react-router-dom";
 
 const HowWeDevelop = () => {
   return (
@@ -19,25 +20,28 @@ const HowWeDevelop = () => {
               Benefits
             </span>
             <h1 className="text-[46px] md:text-[50px] md:text-center lg:text-left font-extrabold text-black leading-tight">
-              How Do We Develop
-              <br />{" "}
-              <span className="text-[#dd1b38]">Custom Applications?</span>
+              Transform Your Ideas into{" "}
+              <span className="text-[#dd1b38]">Exceptional Apps</span>
             </h1>
             <span className="text-gray-600 text-[16px] md:text-lg md:text-center lg:text-left font-medium">
-              Get your dream app developed by a talented and highly skilled team
-              of professionals who work collectively to provide top-notch custom
-              mobile app development services for you. We are highly proficient
-              in engineering custom-built systems. Our developers and experts
-              use the most advanced technologies and equipment to create
-              tailored frameworks to make sure that the developed app is
-              created, focusing on the client’s perceptions. Our developers put
-              their efforts into crafting effective and efficient solutions,
-              resulting in bug-free and user-friendly apps.
+              With a passion for innovation and a dedication to excellence, we
+              specialize in crafting high-quality mobile applications that stand
+              out in the digital landscape. From native to cross-platform
+              solutions, our experienced team leverages the latest technologies
+              to build apps that deliver exceptional performance and user
+              satisfaction. Whether you're a startup looking to disrupt the
+              market or an established business seeking to expand your digital
+              presence, we're here to help you every step of the way. Ready to
+              take the next step? Get in touch with us to discuss your project
+              requirements and turn your dreams into successful apps.
             </span>
           </div>
-          <button className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-black hover:bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] capitalize text-[14px] hover:opacity-85 text-white font-semibold ">
-            Schedule A Meeting
-          </button>
+          <Link
+            to="/contact-us"
+            className=" cursor-pointer w-auto px-6 h-12 flex justify-center items-center border-none outline-none rounded-full bg-black hover:bg-gradient-to-r from-[#f15c20] to-[#e00e2dd8] capitalize text-[14px] hover:opacity-85 text-white font-semibold "
+          >
+            Contact US
+          </Link>
         </div>
       </div>
     </div>
